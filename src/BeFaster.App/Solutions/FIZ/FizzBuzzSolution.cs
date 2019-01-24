@@ -11,32 +11,7 @@ namespace BeFaster.App.Solutions.FIZ
             string numberAsString = Convert.ToString(number);
             string output = string.Empty;
 
-            if ((number % 3 == 0 || numberAsString.Contains("3")) && (number % 5 == 0 || numberAsString.Contains("5")))
-            {
-                output = "fizz buzz";
-                output = OutPutDeluxe(number, numberAsString, output);
-
-            }
-            else if ((number % 3 == 0) && (number % 5 == 0))
-            {
-
-                output = "fizz buzz";
-                output = OutPutDeluxe(number, numberAsString, output);
-            }
-
-            else if (number % 3 == 0 || numberAsString.Contains("3"))
-            {
-                output = "fizz";
-                output = OutPutDeluxe(number, numberAsString, output);
-            }
-
-            else if (number % 5 == 0 || numberAsString.Contains("5"))
-            {
-                output = "buzz";
-                output = OutPutDeluxe(number, numberAsString, output);
-            }
-
-            else if (number >= 10 && number <= 9999)
+            if (number >= 10 && number <= 9999)
             {
 
                 if (FizzBuzzSolution.AllCharactersAreSame(numberAsString))
@@ -61,6 +36,30 @@ namespace BeFaster.App.Solutions.FIZ
                     }
                 }
 
+            }
+            else if ((number % 3 == 0 || numberAsString.Contains("3")) && (number % 5 == 0 || numberAsString.Contains("5")))
+            {
+                output = "fizz buzz";
+                output = OutPutDeluxe(number, numberAsString, output);
+
+            }
+            else if ((number % 3 == 0) && (number % 5 == 0))
+            {
+
+                output = "fizz buzz";
+                output = OutPutDeluxe(number, numberAsString, output);
+            }
+
+            else if (number % 3 == 0 || numberAsString.Contains("3"))
+            {
+                output = "fizz";
+                output = OutPutDeluxe(number, numberAsString, output);
+            }
+
+            else if (number % 5 == 0 || numberAsString.Contains("5"))
+            {
+                output = "buzz";
+                output = OutPutDeluxe(number, numberAsString, output);
             }
             else
             {
@@ -110,4 +109,5 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
 
