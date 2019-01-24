@@ -52,7 +52,7 @@ namespace BeFaster.App.Solutions.FIZ
 
             if (!string.IsNullOrEmpty(output))
                 return output;
-           return  number.ToString();
+            return number.ToString();
         }
 
         private static string OutPutDeluxe(int number, string numberAsString, string output)
@@ -62,7 +62,10 @@ namespace BeFaster.App.Solutions.FIZ
 
                 if (FizzBuzzSolution.AllCharactersAreSame(numberAsString))
                 {
-                    output = output + "deluxe";
+                    if (output.Length != 0)
+                        output = output + "deluxe";
+                    else
+                        output = "deluxe";
                 }
             }
 
@@ -75,6 +78,7 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
 
 
 
