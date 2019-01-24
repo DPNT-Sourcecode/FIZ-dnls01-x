@@ -68,7 +68,7 @@ namespace BeFaster.App.Solutions.FIZ
                         if (!string.IsNullOrEmpty(output))
                             output = output + " " + "fake deluxe";
                         else
-                            output = "deluxe";
+                            output = "fake deluxe";
                     }
                     else
                     {
@@ -91,5 +91,6 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
 
 
