@@ -8,8 +8,10 @@ namespace BeFaster.App.Solutions.HLO
         {
             if (!string.IsNullOrWhiteSpace(friendName))
                 return "Hello, World!";
+            return string.Empty;
         }
     }
 }
+
 
 
