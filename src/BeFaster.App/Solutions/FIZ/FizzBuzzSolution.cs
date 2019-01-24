@@ -38,10 +38,10 @@ namespace BeFaster.App.Solutions.FIZ
 
             else if (number >= 10 && number <= 9999)
             {
-
+                
                 if (FizzBuzzSolution.AllCharactersAreSame(numberAsString))
                 {
-                    output = output + "" + "deluxe";
+                    output = output  + "deluxe";
                 }
 
             }
@@ -62,7 +62,7 @@ namespace BeFaster.App.Solutions.FIZ
 
                 if (FizzBuzzSolution.AllCharactersAreSame(numberAsString))
                 {
-                    if (output.Length != 0)
+                    if (!string.IsNullOrEmpty(output))
                         output = output + "deluxe";
                     else
                         output = "deluxe";
@@ -78,6 +78,7 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
 
 
 
