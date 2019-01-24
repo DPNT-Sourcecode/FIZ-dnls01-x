@@ -6,11 +6,10 @@ namespace BeFaster.App.Solutions.HLO
     {
         public static string Hello(string friendName)
         {
-            if (friendName.Equals("a String. Ignore for now"))
-                return "";
-            else
-                return friendName;
+            if (!string.IsNullOrWhiteSpace(friendName))
+                return "Hello, World!";
         }
     }
 }
+
 
