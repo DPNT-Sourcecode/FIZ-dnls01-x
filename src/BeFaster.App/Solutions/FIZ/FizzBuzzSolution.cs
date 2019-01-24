@@ -41,21 +41,23 @@ namespace BeFaster.App.Solutions.FIZ
 
                 if (FizzBuzzSolution.AllCharactersAreSame(numberAsString))
                 {
-
-                    if (number % 2 != 0)
+                    if (number % 3 == 0 && numberAsString.Contains("3") || (number % 5 == 0 && numberAsString.Contains("5")))
                     {
-                        if (!string.IsNullOrEmpty(output))
-                            output = output + "fake deluxe";
+                        if (number % 2 != 0)
+                        {
+                            if (!string.IsNullOrEmpty(output))
+                                output = output + "fake deluxe";
+                            else
+                                output = "fake deluxe";
+                        }
                         else
-                            output = "fake deluxe";
-                    }
-                    else
-                    {
-                        if (!string.IsNullOrEmpty(output))
-                            output = output + "deluxe";
-                        else
-                            output = "deluxe";
+                        {
+                            if (!string.IsNullOrEmpty(output))
+                                output = output + "deluxe";
+                            else
+                                output = "deluxe";
 
+                        }
                     }
                 }
 
@@ -78,22 +80,24 @@ namespace BeFaster.App.Solutions.FIZ
                 if (FizzBuzzSolution.AllCharactersAreSame(numberAsString))
                 {
 
-                    if (number % 2 != 0)
+                    if (number % 3 == 0 && numberAsString.Contains("3") || (number % 5 == 0 && numberAsString.Contains("5")))
                     {
-                        if (!string.IsNullOrEmpty(output))
-                            output = output + " " + "fake deluxe";
+                        if (number % 2 != 0)
+                        {
+                            if (!string.IsNullOrEmpty(output))
+                                output = output + " " + "fake deluxe";
+                            else
+                                output = "fake deluxe";
+                        }
                         else
-                            output = "fake deluxe";
-                    }
-                    else
-                    {
-                        if (!string.IsNullOrEmpty(output))
-                            output = output + " " + "deluxe";
-                        else
-                            output = "deluxe";
+                        {
+                            if (!string.IsNullOrEmpty(output))
+                                output = output + " " + "deluxe";
+                            else
+                                output = "deluxe";
 
+                        }
                     }
-
                 }
             }
 
@@ -106,3 +110,4 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
