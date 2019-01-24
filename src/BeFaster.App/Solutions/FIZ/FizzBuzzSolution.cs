@@ -1,5 +1,6 @@
 ﻿using BeFaster.Runner.Exceptions;
 using System;
+using System.Linq;
 
 namespace BeFaster.App.Solutions.FIZ
 {
@@ -7,35 +8,89 @@ namespace BeFaster.App.Solutions.FIZ
     {
         public static string FizzBuzz(int number)
         {
-           
-            if (number >= 1 && number <= 9999)
+            string numberAsString = Convert.ToString(number);
+            string output = string.Empty;
+
+            if ((number % 3 == 0 || numberAsString.Contains("3")) && (number % 5 == 0 || numberAsString.Contains("5")))
             {
-                string numberAsString = Convert.ToString(number);
-                if ((number % 3 == 0 || numberAsString.Contains("3")) && (number % 5 == 0 || numberAsString.Contains("5")))
-                {
-                    return "fizz buzz";
-                }
-                else if ((number % 3 == 0) && (number % 5 == 0))
+                output = "fizz buzz";
+                if (number >= 10 && number <= 9999)
                 {
 
-                    return "fizz buzz";
+                    if (FizzBuzzSolution.AllCharactersAreSame(numberAsString))
+                    {
+                        output = output + "deluxe";
+                    }
                 }
-                
-                else if (number % 3 == 0 || numberAsString.Contains("3"))
+
+            }
+            else if ((number % 3 == 0) && (number % 5 == 0))
+            {
+
+                output = "fizz buzz";
+                if (number >= 10 && number <= 9999)
                 {
-                    return "fizz";
+
+                    if (FizzBuzzSolution.AllCharactersAreSame(numberAsString))
+                    {
+                        output = output + "deluxe";
+                    }
                 }
-               
-                else if (number % 5 == 0 || numberAsString.Contains("5"))
+
+            }
+
+            else if (number % 3 == 0 || numberAsString.Contains("3"))
+            {
+                output = "fizz";
+                output = OutPutDeluxe(number, numberAsString, output);
+            }
+
+            else if (number % 5 == 0 || numberAsString.Contains("5"))
+            {
+                output = "buzz";
+                if (number >= 10 && number <= 9999)
                 {
-                    return "buzz";
-                }
-                else
-                {
-                    return number.ToString();
+
+                    if (FizzBuzzSolution.AllCharactersAreSame(numberAsString))
+                    {
+                        output = output + "deluxe";
+                    }
                 }
             }
-            return number.ToString();
+
+            else if (number >= 10 && number <= 9999)
+            {
+
+                if (FizzBuzzSolution.AllCharactersAreSame(numberAsString))
+                {
+                    output = output + "deluxe";
+                }
+
+            }
+            else
+            {
+                return number.ToString();
+            }
+            return output;
+        }
+
+        private static string OutPutDeluxe(int number, string numberAsString, string output)
+        {
+            if (number >= 10 && number <= 9999)
+            {
+
+                if (FizzBuzzSolution.AllCharactersAreSame(numberAsString))
+                {
+                    output = output + "deluxe";
+                }
+            }
+
+            return output;
+        }
+
+        public static bool AllCharactersAreSame(string numberinStringFormat)
+        {
+            return numberinStringFormat.Length == 0 || numberinStringFormat.All(charactres => charactres == numberinStringFormat[0]);
         }
     }
 }
