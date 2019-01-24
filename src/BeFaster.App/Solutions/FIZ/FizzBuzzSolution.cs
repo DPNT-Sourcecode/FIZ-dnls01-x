@@ -41,7 +41,22 @@ namespace BeFaster.App.Solutions.FIZ
 
                 if (FizzBuzzSolution.AllCharactersAreSame(numberAsString))
                 {
-                    output = output + "deluxe";
+
+                    if (number % 2 != 0)
+                    {
+                        if (!string.IsNullOrEmpty(output))
+                            output = output + "fake deluxe";
+                        else
+                            output = "fake deluxe";
+                    }
+                    else
+                    {
+                        if (!string.IsNullOrEmpty(output))
+                            output = output + "deluxe";
+                        else
+                            output = "deluxe";
+
+                    }
                 }
 
             }
@@ -91,6 +106,7 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
 
 
 
