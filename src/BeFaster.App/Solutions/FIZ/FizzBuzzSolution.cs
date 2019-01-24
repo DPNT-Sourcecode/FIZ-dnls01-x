@@ -66,9 +66,7 @@ namespace BeFaster.App.Solutions.FIZ
                 return number.ToString();
             }
 
-            if (!string.IsNullOrEmpty(output))
-                return output;
-            return number.ToString();
+            return output;
         }
 
         private static string OutPutDeluxe(int number, string numberAsString, string output)
@@ -109,5 +107,3 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
-
-
