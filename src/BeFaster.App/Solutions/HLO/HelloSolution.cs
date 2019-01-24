@@ -7,11 +7,12 @@ namespace BeFaster.App.Solutions.HLO
         public static string Hello(string friendName)
         {
             if (!string.IsNullOrWhiteSpace(friendName))
-                return $"Hello, {friendName}";
+                return $"Hello, {friendName}!";
             return string.Empty;
         }
     }
 }
+
 
 
 
