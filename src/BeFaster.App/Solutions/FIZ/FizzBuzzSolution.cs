@@ -59,11 +59,13 @@ namespace BeFaster.App.Solutions.FIZ
             }
             else
             {
-
+                if (output.Length > 0)
+                    return output;
                 return numberAsString;
             }
             return output;
         }
     }
 }
+
 
