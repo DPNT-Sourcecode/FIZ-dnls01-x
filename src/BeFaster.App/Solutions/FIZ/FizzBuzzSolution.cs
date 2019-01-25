@@ -36,39 +36,40 @@ namespace BeFaster.App.Solutions.FIZ
                     }
                 }
 
-            }
-            else if ((number % 3 == 0 || numberAsString.Contains("3")) && (number % 5 == 0 || numberAsString.Contains("5")))
-            {
-                output = "fizz buzz";
-                output = OutPutDeluxe(number, numberAsString, output);
+                else if ((number % 3 == 0 || numberAsString.Contains("3")) && (number % 5 == 0 || numberAsString.Contains("5")))
+                {
+                    output = "fizz buzz";
+                    output = OutPutDeluxe(number, numberAsString, output);
 
-            }
-            else if ((number % 3 == 0) && (number % 5 == 0))
-            {
+                }
+                else if ((number % 3 == 0) && (number % 5 == 0))
+                {
 
-                output = "fizz buzz";
-                output = OutPutDeluxe(number, numberAsString, output);
-            }
+                    output = "fizz buzz";
+                    output = OutPutDeluxe(number, numberAsString, output);
+                }
 
-            else if (number % 3 == 0 || numberAsString.Contains("3"))
-            {
-                output = "fizz";
-                output = OutPutDeluxe(number, numberAsString, output);
-            }
+                else if (number % 3 == 0 || numberAsString.Contains("3"))
+                {
+                    output = "fizz";
+                    output = OutPutDeluxe(number, numberAsString, output);
+                }
 
-            else if (number % 5 == 0 || numberAsString.Contains("5"))
-            {
-                output = "buzz";
-                output = OutPutDeluxe(number, numberAsString, output);
-            }
-            else
-            {
+                else if (number % 5 == 0 || numberAsString.Contains("5"))
+                {
+                    output = "buzz";
+                    output = OutPutDeluxe(number, numberAsString, output);
+                }
+                else
+                {
+                    return number.ToString();
+                }
+
+                if (!string.IsNullOrEmpty(output))
+                    return output;
                 return number.ToString();
             }
-
-            if (!string.IsNullOrEmpty(output))
-                return output;
-            return number.ToString();
+            return output;
         }
 
         private static string OutPutDeluxe(int number, string numberAsString, string output)
@@ -109,4 +110,5 @@ namespace BeFaster.App.Solutions.FIZ
         }
     }
 }
+
 
