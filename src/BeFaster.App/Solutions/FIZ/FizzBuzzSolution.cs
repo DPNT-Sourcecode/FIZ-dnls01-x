@@ -56,13 +56,14 @@ namespace BeFaster.App.Solutions.FIZ
                         output = "deluxe";
                     }
                 }
-                return output;
             }
             else
             {
 
                 return numberAsString;
             }
+            return output;
         }
     }
 }
+
